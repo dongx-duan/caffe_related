@@ -30,3 +30,6 @@ sudo ldconfig -v | grep cudnn
 ```
 nvidia-smi
 ```
+
+#### 5 add nvcc to path
+add ```/usr/local/cuda/bin``` to path
