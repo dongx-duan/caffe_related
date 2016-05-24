@@ -27,10 +27,15 @@ sudo ln -s libcudnn.so.7.0 libcudnn.so
 sudo ldconfig -v | grep cudnn    
 ```
 
-#### 4 check cuda
+#### 4 Install Cuda-Toolkit to enable nvcc
+```
+sudo apt-get install nvidia-cuda-toolkit
+```
+
+#### 5 check cuda
 ```
 nvidia-smi
 ```
 
-#### 5 add nvcc to path
+#### 6 add nvcc to path
 add ```/usr/local/cuda/bin``` to path
