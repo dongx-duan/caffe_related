@@ -13,8 +13,9 @@ sudo ldconfig
 #### 3 install cudnn
 unzip cudnn and copy head files and library to cuda
 ```
-tar -zxvf cudnn-7.0-linux-x64-v3.0-prod.tgz    
-sudo cp lib* /usr/local/cuda/lib64/    
+tar -zxvf cudnn-7.0-linux-x64-v3.0-prod.tgz   
+cd cuda
+sudo cp lib64/* /usr/local/cuda/lib64/    
 sudo cp cudnn.h /usr/local/cuda/include/    
 ```
 create soft link
