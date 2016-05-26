@@ -8,9 +8,13 @@ apt-get install cuda
 #### 2  config cuda
 ```  
 echo "/usr/local/cuda/lib64" | sudo tee /etc/ld.so.conf.d/cuda64.conf    
-sudo ldconfig    
+sudo ldconfig
+nvidia-smi
 ```
-#### 3 install cudnn
+
+<del>
+all ready installed. Use below method to update CuDNN
+#### 3 update cudnn
 cudnn v4:   
 unzip cudnn and copy head files and library to cuda
 ```
@@ -27,24 +31,11 @@ sudo ln -s libcudnn.so.7.0.64 libcudnn.so.7.0
 sudo ln -s libcudnn.so.7.0 libcudnn.so    
 sudo ldconfig -v | grep cudnn    
 ```
+</del>
 
-cudnn v5:    
-download cudnn-7.5-linux-x64-v5.0-ga.tgz from Nvidia developer website.   
-The install process is the same as above except file names.   
 
 #### 4 Install Cuda-Toolkit to enable nvcc
 ```
 sudo apt-get install nvidia-cuda-toolkit
 ```
-Remove ocl-icd-libopencl1 if it conflits with nvidia-opencl.    
-Download deb file of nvidia opencl from:   
-http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/    
-It may take a while to install nvidia opencl   
-
-#### 5 check cuda
-```
-nvidia-smi
-```
-
-#### 6 add nvcc to path
 add ```/usr/local/cuda/bin``` to path
