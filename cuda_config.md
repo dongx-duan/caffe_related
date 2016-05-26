@@ -11,6 +11,7 @@ echo "/usr/local/cuda/lib64" | sudo tee /etc/ld.so.conf.d/cuda64.conf
 sudo ldconfig    
 ```
 #### 3 install cudnn
+cudnn v4:   
 unzip cudnn and copy head files and library to cuda
 ```
 tar -zxvf cudnn-7.0-linux-x64-v3.0-prod.tgz   
@@ -26,6 +27,10 @@ sudo ln -s libcudnn.so.7.0.64 libcudnn.so.7.0
 sudo ln -s libcudnn.so.7.0 libcudnn.so    
 sudo ldconfig -v | grep cudnn    
 ```
+
+cudnn v5:    
+download cudnn-7.5-linux-x64-v5.0-ga.tgz from Nvidia developer website.   
+The install process is the same as above except file names.   
 
 #### 4 Install Cuda-Toolkit to enable nvcc
 ```
