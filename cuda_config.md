@@ -10,14 +10,13 @@ apt-get install cuda
 echo "/usr/local/cuda/lib64" | sudo tee /etc/ld.so.conf.d/cuda64.conf    
 sudo ldconfig
 nvidia-smi
+nvcc -V
 ```
 
-#### 3 Install Cuda-Toolkit to enable nvcc
-```
-sudo apt-get install nvidia-cuda-toolkit
-```
+The version of cuda-toolkit must match the vesion of cuda driver!!!   
+Otherwise nvcc will fail (silently).
 
-#### 4 update CuDNN (Optional)
+#### 3 update CuDNN (Optional)
 unzip cudnn and copy head files and library to cuda
 ```
 tar -zxvf cudnn-7.0-linux-x64-v3.0-prod.tgz   
@@ -35,7 +34,7 @@ sudo ldconfig -v | grep cudnn
 ```
 
 
-#### 5 remove nvidia driver for fresh reinstall
+#### 4 remove nvidia driver for fresh reinstall
 ```
 sudo dpkg -l | grep -i nvidia
 sudo  apt-get remove --purge nvidia-*
