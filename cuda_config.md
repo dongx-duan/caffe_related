@@ -31,6 +31,10 @@ sudo ldconfig -v | grep cudnn
 ```
 sudo apt-get install nvidia-cuda-toolkit
 ```
+Remove ocl-icd-libopencl1 if it conflits with nvidia-opencl.    
+Download deb file of nvidia opencl from:   
+http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/    
+It may take a while to install nvidia opencl   
 
 #### 5 check cuda
 ```
