@@ -11,7 +11,11 @@ LeNet5:
 AlexNet 2012:    
 > Alex Krizhevsky, etc. [ImageNet Classification with Deep Convolutional Neural Networks](http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
 
-
+VGG 2014:
+> Karen Simonyan, etc. [Very Deep Convolutional Networks for Large-Scale Image Recognition]
+(http://arxiv.org/abs/1409.1556)    
+    
+    
 ### 3. Architectures(2): RNN
 ---   
 Machine Translation:   
